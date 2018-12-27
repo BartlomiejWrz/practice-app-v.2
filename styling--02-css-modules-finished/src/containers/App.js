@@ -5,7 +5,10 @@ import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
 
 class App extends Component {
-  state = {
+  constructor(props){
+  super(props);
+  console.log('[App.js] Inside Constructor',props);
+  this.state = {
     persons: [
       { id: 'asfa1', name: 'Max', age: 28 },
       { id: 'vasdf1', name: 'Manu', age: 29 },
@@ -14,6 +17,21 @@ class App extends Component {
     otherState: 'some other value',
     showPersons: false
   }
+  }
+
+  componentWillMount() {
+    console.log('[App.js] Inside componentWillMount()')
+  }
+
+  //state = {
+  //  persons: [
+  //    { id: 'asfa1', name: 'Max', age: 28 },
+  //    { id: 'vasdf1', name: 'Manu', age: 29 },
+  //    { id: 'asdf11', name: 'Stephanie', age: 26 }
+  //  ],
+  //  otherState: 'some other value',
+  //  showPersons: false
+  //}
 
   nameChangedHandler = (event, id) => {
     const personIndex = this.state.persons.findIndex(p => {
