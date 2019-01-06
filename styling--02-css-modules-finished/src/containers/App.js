@@ -28,11 +28,11 @@ class App extends PureComponent {
   }
 
 
-  shouldComponentUpdate(nextProps, nextState) {
-    console.log('[UPDATE App.js] Inside shouldComponentUpdate', nextProps, nextState);
-    return nextState.persons !== this.state.persons ||
-      nextState.showPersons !== this.state.showPersons;
-  }
+  //shouldComponentUpdate(nextProps, nextState) {
+  //  console.log('[UPDATE App.js] Inside shouldComponentUpdate', nextProps, nextState);
+  //  return nextState.persons !== this.state.persons ||
+  //    nextState.showPersons !== this.state.showPersons;
+  //}
 
   componentWillUpdate(nextProps, nextState) {
     console.log('[UPDATE App.js] Inside componentWillUpdate', nextProps, nextState);
